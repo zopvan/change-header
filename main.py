@@ -12,9 +12,9 @@ def rusak_satu_folder(nama_folder):
     # Ambil daftar semua item di dalam folder
     list_file = os.listdir(nama_folder)
     
-    # === [BARU] VALIDASI FOLDER KOSONG ===
+    # === VALIDASI FOLDER KOSONG ===
     if len(list_file) == 0:
-        print(f"⚠️  VALIDASI: Folder '{nama_folder}' KOSONG melompong.")
+        print(f"⚠️  VALIDASI: Folder '{nama_folder}' KOSONG coy.")
         print("   Tidak ada file yang diubah headernya.")
         return  # <-- Stop di sini, kembali ke menu utama
     # =====================================
@@ -25,7 +25,7 @@ def rusak_satu_folder(nama_folder):
     for nama_file in list_file:
         full_path = os.path.join(nama_folder, nama_file)
 
-        # 3. Pastikan yang kita proses adalah FILE (bukan folder lain)
+        # 3. validasi proses adalah FILE (bukan folder lain)
         if os.path.isfile(full_path):
             try:
                 with open(full_path, 'r+b') as f:
@@ -49,7 +49,7 @@ def rusak_satu_folder(nama_folder):
         print(f"SELESAI. Total {jumlah_sukses} file telah dirusak di folder '{nama_folder}'.")
 
 # ==========================================
-# EKSEKUSI
+# EKSEKUSI sc
 # ==========================================
 target_folder = 'src'
 
